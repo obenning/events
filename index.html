@@ -6,22 +6,48 @@
 <title>Verfügbare Schulungen & Events</title>
 
 <style>
-/* === EXAKT WIE WEBSITE-REFERENZ-MODUL === */
-/* Nutzt die gleichen Klassen und Struktur wie solutions-card */
+/* === WEBSITE FONTS DIREKT EINBINDEN === */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e67ba9f256c7e0410ff9a/1698588603351/Inter-Regular.eot);
+  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e67e4fad67d3ed1ead2e3/1698588644718/Inter-Regular.woff2) format("woff2"),
+       url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e67e4425da202458de638/1698588644798/Inter-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e6bcca330e02cfb57f651/1698589645008/Inter-SemiBold.woff2) format("woff2"),
+       url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e6bcc4c040b64466e992a/1698589645209/Inter-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e679ca926e015fbe9e50e/1698588573045/PlayfairDisplay-Regular.woff2) format("woff2"),
+       url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e679ce7c1f1256e369241/1698588573113/PlayfairDisplay-Regular.woff) format("woff");
+}
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .event-card-events_1761661402755 {
+    .event-card-events_1761662716983 {
         margin-bottom: 1.5rem !important;
     }
-    .event-grid-events_1761661402755 {
+    .event-grid-events_1761662716983 {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
     }
 }
 
 /* Event Cards - Identisch zu solutions-card */
-.event-card-events_1761661402755 { 
+.event-card-events_1761662716983 { 
     background: #FFFFFF; 
     border: 1px solid #DEE2E6; 
     border-radius: 8px; 
@@ -33,78 +59,67 @@
     transition: all 0.4s ease; 
 }
 
-.event-card-events_1761661402755:hover { 
+.event-card-events_1761662716983:hover { 
     background: #063AA8 !important; 
     transform: translateY(-8px) !important; 
     box-shadow: 0 12px 32px rgba(6,58,168,0.3) !important; 
 }
 
-.event-title-events_1761661402755 { 
-    font-family: var(--heading-font-font-family); 
+.event-title-events_1761662716983 { 
+    font-family: 'Playfair Display', serif; 
     color: #212529; 
-    margin: 0 0 0.75rem 0; 
-    font-size: 1.1rem; 
+    margin: 0 0 1rem 0; 
+    font-size: 1.25rem; 
     transition: color 0.4s ease; 
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.event-desc-events_1761661402755 { 
-    font-family: var(--body-font-font-family); 
+.event-desc-events_1761662716983 { 
+    font-family: 'Inter', sans-serif; 
     color: #6c757d; 
-    margin: 0.35rem 0; 
-    font-size: 0.9rem; 
+    margin: 0.5rem 0; 
+    font-size: 0.95rem; 
     transition: color 0.4s ease; 
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    line-height: 1.6;
 }
 
-.event-card-events_1761661402755:hover .event-title-events_1761661402755 { 
+.event-card-events_1761662716983:hover .event-title-events_1761662716983 { 
     color: #FFFFFF !important; 
 }
 
-.event-card-events_1761661402755:hover .event-desc-events_1761661402755 { 
+.event-card-events_1761662716983:hover .event-desc-events_1761662716983 { 
     color: rgba(255,255,255,0.9) !important; 
 }
 
-.event-card-events_1761661402755:hover img { 
-    transform: scale(1.05) !important; 
-    filter: brightness(1.1) !important; 
-}
-
 /* Event-spezifische Ergänzungen */
-.event-availability-events_1761661402755 {
+.event-availability-events_1761662716983 {
     background: linear-gradient(135deg, #063AA8, #084bc4);
     color: white;
-    padding: 0.75rem;
+    padding: 0.875rem;
     border-radius: 6px;
     text-align: center;
-    margin: 1rem 0;
+    margin: 1.25rem 0 0 0;
     font-weight: 600;
     font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
     transition: all 0.4s ease;
 }
 
-.event-card-events_1761661402755:hover .event-availability-events_1761661402755 {
+.event-card-events_1761662716983:hover .event-availability-events_1761662716983 {
     background: rgba(255,255,255,0.2) !important;
 }
 
-.event-availability-events_1761661402755.low {
+.event-availability-events_1761662716983.low {
     background: linear-gradient(135deg, #dc3545, #c82333);
 }
 
-.event-availability-events_1761661402755.medium {
+.event-availability-events_1761662716983.medium {
     background: linear-gradient(135deg, #ffc107, #ff9800);
 }
 
-.event-card-events_1761661402755:hover .event-availability-events_1761661402755.low,
-.event-card-events_1761661402755:hover .event-availability-events_1761661402755.medium {
+.event-card-events_1761662716983:hover .event-availability-events_1761662716983.low,
+.event-card-events_1761662716983:hover .event-availability-events_1761662716983.medium {
     background: rgba(255,255,255,0.2) !important;
-}
-
-.event-icon-events_1761661402755 {
-    font-size: 1.05rem;
-    min-width: 18px;
 }
 </style>
 </head>
@@ -113,139 +128,93 @@
 <section style="padding: 2rem 0; background: #FFFFFF;">
     <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
         
-        <!-- Header wie im Referenz-Modul -->
-        <div style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="font-family: var(--heading-font-font-family); font-size: var(--heading-2-size); font-weight: var(--heading-font-font-weight); line-height: var(--heading-font-line-height); color: #063AA8; margin: 0 0 1rem 0;">
-                🎓 Verfügbare Schulungen & Events
-            </h2>
-            <p style="font-family: var(--body-font-font-family); font-size: var(--normal-text-size); line-height: var(--body-font-line-height); color: #6c757d; max-width: 800px; margin: 0 auto;">
-                Sichern Sie sich jetzt Ihren Platz für unsere professionellen Schulungen
-            </p>
-        </div>
-        
         <!-- Grid exakt wie im Referenz-Modul -->
-        <div class="event-grid-events_1761661402755" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="event-grid-events_1761662716983" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
 
-            <a class="event-card-events_1761661402755" href="https://book.stripe.com/test_cNidR24rackr3sf9epdEs04" target="_blank" rel="noopener">
-                <img src="https://images.squarespace-cdn.com/content/651eacf7cae17a228645a660/d35f20ab-9a62-4e2f-82f9-831eb86fa73a/Academy_Laptop.png?content-type=image%2Fpng" 
-                     style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; margin: 0; line-height: 0;" 
-                     alt="Excel Grundlagen" 
-                     loading="lazy"
-                     decoding="async">
-                
-                <div style="padding: 1rem;">
-                    <h4 class="event-title-events_1761661402755">Excel Grundlagen</h4>
+            <a class="event-card-events_1761662716983" href="https://book.stripe.com/test_cNidR24rackr3sf9epdEs04" target="_blank" rel="noopener">
+                <div style="padding: 1.5rem;">
+                    <h4 class="event-title-events_1761662716983">Excel Grundlagen</h4>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📅</span>
+                    <p class="event-desc-events_1761662716983">
                         26.11.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📍</span>
+                    <p class="event-desc-events_1761662716983">
                         Schulungsraum A - Aachen
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">💰</span>
+                    <p class="event-desc-events_1761662716983">
                         299.00€
                     </p>
                     
-                    <div class="event-availability-events_1761661402755 ">
-                        ✅ Noch 7 von 15 Plätzen verfügbar
+                    <div class="event-availability-events_1761662716983 ">
+                        Noch 7 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761661402755" href="https://buy.stripe.com/test_def456" target="_blank" rel="noopener">
-                <img src="https://images.squarespace-cdn.com/content/651eacf7cae17a228645a660/d35f20ab-9a62-4e2f-82f9-831eb86fa73a/Academy_Laptop.png?content-type=image%2Fpng" 
-                     style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; margin: 0; line-height: 0;" 
-                     alt="PowerPoint für Profis" 
-                     loading="lazy"
-                     decoding="async">
-                
-                <div style="padding: 1rem;">
-                    <h4 class="event-title-events_1761661402755">PowerPoint für Profis</h4>
+            <a class="event-card-events_1761662716983" href="https://buy.stripe.com/test_def456" target="_blank" rel="noopener">
+                <div style="padding: 1.5rem;">
+                    <h4 class="event-title-events_1761662716983">PowerPoint für Profis</h4>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📅</span>
+                    <p class="event-desc-events_1761662716983">
                         11.12.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📍</span>
+                    <p class="event-desc-events_1761662716983">
                         Schulungsraum B - Köln
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">💰</span>
+                    <p class="event-desc-events_1761662716983">
                         349.00€
                     </p>
                     
-                    <div class="event-availability-events_1761661402755 ">
-                        ✅ Noch 12 von 15 Plätzen verfügbar
+                    <div class="event-availability-events_1761662716983 ">
+                        Noch 12 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761661402755" href="https://buy.stripe.com/test_ghi789" target="_blank" rel="noopener">
-                <img src="https://images.squarespace-cdn.com/content/651eacf7cae17a228645a660/d35f20ab-9a62-4e2f-82f9-831eb86fa73a/Academy_Laptop.png?content-type=image%2Fpng" 
-                     style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; margin: 0; line-height: 0;" 
-                     alt="Word Dokumentenmanagement" 
-                     loading="lazy"
-                     decoding="async">
-                
-                <div style="padding: 1rem;">
-                    <h4 class="event-title-events_1761661402755">Word Dokumentenmanagement</h4>
+            <a class="event-card-events_1761662716983" href="https://buy.stripe.com/test_ghi789" target="_blank" rel="noopener">
+                <div style="padding: 1.5rem;">
+                    <h4 class="event-title-events_1761662716983">Word Dokumentenmanagement</h4>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📅</span>
+                    <p class="event-desc-events_1761662716983">
                         11.11.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📍</span>
+                    <p class="event-desc-events_1761662716983">
                         Online via Zoom
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">💰</span>
+                    <p class="event-desc-events_1761662716983">
                         199.00€
                     </p>
                     
-                    <div class="event-availability-events_1761661402755 ">
-                        ✅ Noch 13 von 15 Plätzen verfügbar
+                    <div class="event-availability-events_1761662716983 ">
+                        Noch 13 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761661402755" href="https://buy.stripe.com/test_jkl012" target="_blank" rel="noopener">
-                <img src="https://images.squarespace-cdn.com/content/651eacf7cae17a228645a660/d35f20ab-9a62-4e2f-82f9-831eb86fa73a/Academy_Laptop.png?content-type=image%2Fpng" 
-                     style="width: 100%; height: auto; object-fit: cover; object-position: center; display: block; margin: 0; line-height: 0;" 
-                     alt="Teams & Collaboration" 
-                     loading="lazy"
-                     decoding="async">
-                
-                <div style="padding: 1rem;">
-                    <h4 class="event-title-events_1761661402755">Teams & Collaboration</h4>
+            <a class="event-card-events_1761662716983" href="https://buy.stripe.com/test_jkl012" target="_blank" rel="noopener">
+                <div style="padding: 1.5rem;">
+                    <h4 class="event-title-events_1761662716983">Teams & Collaboration</h4>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📅</span>
+                    <p class="event-desc-events_1761662716983">
                         26.12.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">📍</span>
+                    <p class="event-desc-events_1761662716983">
                         Schulungsraum A - Aachen
                     </p>
                     
-                    <p class="event-desc-events_1761661402755">
-                        <span class="event-icon-events_1761661402755">💰</span>
+                    <p class="event-desc-events_1761662716983">
                         249.00€
                     </p>
                     
-                    <div class="event-availability-events_1761661402755 ">
-                        ✅ Noch 15 von 15 Plätzen verfügbar
+                    <div class="event-availability-events_1761662716983 ">
+                        Noch 15 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
@@ -253,8 +222,8 @@
         </div>
         
         <!-- Footer -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #DEE2E6; color: #6c757d; font-family: var(--body-font-font-family); font-size: 0.9rem;">
-            <p style="margin: 0.25rem 0;">📅 Letzte Aktualisierung: 28.10.2025, 14:23</p>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #DEE2E6; color: #6c757d; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
+            <p style="margin: 0.25rem 0;">Letzte Aktualisierung: 28.10.2025, 14:45</p>
             <p style="margin: 0.25rem 0;">Bei Fragen kontaktieren Sie uns gerne</p>
         </div>
     </div>
