@@ -27,27 +27,34 @@
 }
 
 @font-face {
-  font-family: "Playfair Display";
+  font-family: "Inter";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-display: swap;
-  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e679ca926e015fbe9e50e/1698588573045/PlayfairDisplay-Regular.woff2) format("woff2"),
-       url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e679ce7c1f1256e369241/1698588573113/PlayfairDisplay-Regular.woff) format("woff");
+  src: url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e6bcca330e02cfb57f651/1698589645008/Inter-SemiBold.woff2) format("woff2"),
+       url(https://static1.squarespace.com/static/651eacf7cae17a228645a660/t/653e6bcc4c040b64466e992a/1698589645209/Inter-SemiBold.woff) format("woff");
+}
+
+/* Body Reset für cleanes iframe */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-    .event-card-events_1761662736215 {
+    .event-card-events_1761663158400 {
         margin-bottom: 1.5rem !important;
     }
-    .event-grid-events_1761662736215 {
+    .event-grid-events_1761663158400 {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
     }
 }
 
 /* Event Cards - Identisch zu solutions-card */
-.event-card-events_1761662736215 { 
+.event-card-events_1761663158400 { 
     background: #FFFFFF; 
     border: 1px solid #DEE2E6; 
     border-radius: 8px; 
@@ -59,22 +66,22 @@
     transition: all 0.4s ease; 
 }
 
-.event-card-events_1761662736215:hover { 
+.event-card-events_1761663158400:hover { 
     background: #063AA8 !important; 
     transform: translateY(-8px) !important; 
     box-shadow: 0 12px 32px rgba(6,58,168,0.3) !important; 
 }
 
-.event-title-events_1761662736215 { 
-    font-family: 'Playfair Display', serif; 
+.event-title-events_1761663158400 { 
+    font-family: 'Inter', sans-serif; 
+    font-weight: 700;
     color: #212529; 
     margin: 0 0 1rem 0; 
     font-size: 1.25rem; 
     transition: color 0.4s ease; 
-    font-weight: 400;
 }
 
-.event-desc-events_1761662736215 { 
+.event-desc-events_1761663158400 { 
     font-family: 'Inter', sans-serif; 
     color: #6c757d; 
     margin: 0.5rem 0; 
@@ -83,16 +90,16 @@
     line-height: 1.6;
 }
 
-.event-card-events_1761662736215:hover .event-title-events_1761662736215 { 
+.event-card-events_1761663158400:hover .event-title-events_1761663158400 { 
     color: #FFFFFF !important; 
 }
 
-.event-card-events_1761662736215:hover .event-desc-events_1761662736215 { 
+.event-card-events_1761663158400:hover .event-desc-events_1761663158400 { 
     color: rgba(255,255,255,0.9) !important; 
 }
 
 /* Event-spezifische Ergänzungen */
-.event-availability-events_1761662736215 {
+.event-availability-events_1761663158400 {
     background: linear-gradient(135deg, #063AA8, #084bc4);
     color: white;
     padding: 0.875rem;
@@ -105,20 +112,20 @@
     transition: all 0.4s ease;
 }
 
-.event-card-events_1761662736215:hover .event-availability-events_1761662736215 {
+.event-card-events_1761663158400:hover .event-availability-events_1761663158400 {
     background: rgba(255,255,255,0.2) !important;
 }
 
-.event-availability-events_1761662736215.low {
+.event-availability-events_1761663158400.low {
     background: linear-gradient(135deg, #dc3545, #c82333);
 }
 
-.event-availability-events_1761662736215.medium {
+.event-availability-events_1761663158400.medium {
     background: linear-gradient(135deg, #ffc107, #ff9800);
 }
 
-.event-card-events_1761662736215:hover .event-availability-events_1761662736215.low,
-.event-card-events_1761662736215:hover .event-availability-events_1761662736215.medium {
+.event-card-events_1761663158400:hover .event-availability-events_1761663158400.low,
+.event-card-events_1761663158400:hover .event-availability-events_1761663158400.medium {
     background: rgba(255,255,255,0.2) !important;
 }
 </style>
@@ -129,105 +136,117 @@
     <div style="max-width: 1400px; margin: 0 auto; padding: 0 2rem;">
         
         <!-- Grid exakt wie im Referenz-Modul -->
-        <div class="event-grid-events_1761662736215" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+        <div class="event-grid-events_1761663158400" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
 
-            <a class="event-card-events_1761662736215" href="https://book.stripe.com/test_cNidR24rackr3sf9epdEs04" target="_blank" rel="noopener">
+            <a class="event-card-events_1761663158400" href="https://book.stripe.com/test_cNidR24rackr3sf9epdEs04" target="_blank" rel="noopener">
                 <div style="padding: 1.5rem;">
-                    <h4 class="event-title-events_1761662736215">Excel Grundlagen</h4>
+                    <h4 class="event-title-events_1761663158400">Excel Grundlagen</h4>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         26.11.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         Schulungsraum A - Aachen
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         299.00€
                     </p>
                     
-                    <div class="event-availability-events_1761662736215 ">
+                    <div class="event-availability-events_1761663158400 ">
                         Noch 7 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761662736215" href="https://buy.stripe.com/test_def456" target="_blank" rel="noopener">
+            <a class="event-card-events_1761663158400" href="https://buy.stripe.com/test_def456" target="_blank" rel="noopener">
                 <div style="padding: 1.5rem;">
-                    <h4 class="event-title-events_1761662736215">PowerPoint für Profis</h4>
+                    <h4 class="event-title-events_1761663158400">PowerPoint für Profis</h4>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         11.12.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         Schulungsraum B - Köln
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         349.00€
                     </p>
                     
-                    <div class="event-availability-events_1761662736215 ">
+                    <div class="event-availability-events_1761663158400 ">
                         Noch 12 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761662736215" href="https://buy.stripe.com/test_ghi789" target="_blank" rel="noopener">
+            <a class="event-card-events_1761663158400" href="https://buy.stripe.com/test_ghi789" target="_blank" rel="noopener">
                 <div style="padding: 1.5rem;">
-                    <h4 class="event-title-events_1761662736215">Word Dokumentenmanagement</h4>
+                    <h4 class="event-title-events_1761663158400">Word Dokumentenmanagement</h4>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         11.11.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         Online via Zoom
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         199.00€
                     </p>
                     
-                    <div class="event-availability-events_1761662736215 ">
+                    <div class="event-availability-events_1761663158400 ">
                         Noch 13 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
-            <a class="event-card-events_1761662736215" href="https://buy.stripe.com/test_jkl012" target="_blank" rel="noopener">
+            <a class="event-card-events_1761663158400" href="https://buy.stripe.com/test_jkl012" target="_blank" rel="noopener">
                 <div style="padding: 1.5rem;">
-                    <h4 class="event-title-events_1761662736215">Teams & Collaboration</h4>
+                    <h4 class="event-title-events_1761663158400">Teams & Collaboration</h4>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         26.12.2025 um 09:00 Uhr
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         Schulungsraum A - Aachen
                     </p>
                     
-                    <p class="event-desc-events_1761662736215">
+                    <p class="event-desc-events_1761663158400">
                         249.00€
                     </p>
                     
-                    <div class="event-availability-events_1761662736215 ">
+                    <div class="event-availability-events_1761663158400 ">
                         Noch 15 von 15 Plätzen verfügbar
                     </div>
                 </div>
             </a>
     
         </div>
-        
-        <!-- Footer -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #DEE2E6; color: #6c757d; font-family: 'Inter', sans-serif; font-size: 0.9rem;">
-            <p style="margin: 0.25rem 0;">Letzte Aktualisierung: 28.10.2025, 14:45</p>
-            <p style="margin: 0.25rem 0;">Bei Fragen kontaktieren Sie uns gerne</p>
-        </div>
     </div>
 </section>
+
+<script>
+// Automatische Höhenanpassung für iframe
+function sendHeight() {
+    const height = document.body.scrollHeight;
+    window.parent.postMessage({
+        type: 'resize',
+        height: height
+    }, '*');
+}
+
+// Bei Load und bei Resize
+window.addEventListener('load', sendHeight);
+window.addEventListener('resize', sendHeight);
+
+// Zusätzlich nach kurzer Verzögerung (für Schriftarten etc.)
+setTimeout(sendHeight, 500);
+</script>
 
 </body>
 </html>
