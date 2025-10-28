@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verfügbare Schulungen & Events</title>
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+.event-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.event-card h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-size: 1.4em;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+.event-info {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #555;
+  font-size: 1.05em;
+}
+.event-info span {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+.availability {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.availability.low {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+}
+.availability.medium {
+  background: linear-gradient(135deg, #ffa502, #ff6348);
+}
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+.no-events {
+  background: white;
+  border-radius: 15px;
+  padding: 60px 30px;
+  text-align: center;
+  color: #555;
+}
+.no-events h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+.footer {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  opacity: 0.9;
+  font-size: 0.95em;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-card {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>🎓 Verfügbare Schulungen & Events</h1>
+<div class="events-grid">
+
+<div class="no-events">
+  <h2>Keine verfügbaren Termine</h2>
+  <p>Aktuell sind alle Termine ausgebucht oder es stehen keine neuen Termine fest.</p>
+  <p>Schauen Sie bald wieder vorbei!</p>
+</div>
+</div>
+<div class="footer">
+  <p>📅 Letzte Aktualisierung: 27.10.2025, 14:06</p>
+  <p>Bei Fragen kontaktieren Sie uns</p>
+</div>
+</div>
+</body>
+</html>
